@@ -1,0 +1,15 @@
+module soundtop(input CLK48M, input [8:1] SW,
+		input [2:1] PSW, output [10:1] LED);
+   // Do not modify following lines
+   wire SPEAKER;
+   reg  CLK24M = 0;
+   always @(posedge CLK48M) CLK24M <= ~CLK24M;
+   assign LED[ 2] = SPEAKER;
+   assign LED[ 5] = SPEAKER;
+   assign LED[ 6] = 1;
+   assign LED[ 8] = 1;
+   assign LED[ 9] = ^SW;
+   assign LED[10] = ^PSW;
+   
+   sound sound(CLK24M, ~SW[1], PSW, SPEAKER);
+endmodule

@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Nov 27 15:06:25 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : soundtop
+Top-level Entity Name : soundtop
+Family : MAX 10
+Total logic elements : 123
+    Total combinational functions : 123
+    Dedicated logic registers : 80
+Total registers : 80
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

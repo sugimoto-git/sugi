@@ -1,0 +1,398 @@
+Analysis & Synthesis report for video
+Wed Dec 18 13:31:17 2024
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |video|color:color|block_dir
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "color:color"
+ 13. Port Connectivity Checks: "VGAtiming:VGAtiming"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 18 13:31:16 2024          ;
+; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                      ; video                                          ;
+; Top-level Entity Name              ; video                                          ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 284                                            ;
+;     Total combinational functions  ; 284                                            ;
+;     Dedicated logic registers      ; 154                                            ;
+; Total registers                    ; 154                                            ;
+; Total pins                         ; 35                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08SAE144C8GES   ;                    ;
+; Top-level entity name                                            ; video              ; video              ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; video.v                          ; yes             ; Auto-Found Verilog HDL File  ; /home1/y2022/s2210337/mics-second/video/video.v     ;         ;
+; VGAtiming.v                      ; yes             ; Auto-Found Verilog HDL File  ; /home1/y2022/s2210337/mics-second/video/VGAtiming.v ;         ;
+; color.v                          ; yes             ; Auto-Found Verilog HDL File  ; /home1/y2022/s2210337/mics-second/video/color.v     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 284    ;
+;                                             ;        ;
+; Total combinational functions               ; 284    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 160    ;
+;     -- 3 input functions                    ; 63     ;
+;     -- <=2 input functions                  ; 61     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 235    ;
+;     -- arithmetic mode                      ; 49     ;
+;                                             ;        ;
+; Total registers                             ; 154    ;
+;     -- Dedicated logic registers            ; 154    ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 35     ;
+;                                             ;        ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; CLK24M ;
+; Maximum fan-out                             ; 154    ;
+; Total fan-out                               ; 1410   ;
+; Average fan-out                             ; 2.78   ;
++---------------------------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
+; |video                     ; 284 (6)             ; 154 (1)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |video                     ; video       ; work         ;
+;    |VGAtiming:VGAtiming|   ; 39 (39)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |video|VGAtiming:VGAtiming ; VGAtiming   ; work         ;
+;    |color:color|           ; 239 (239)           ; 128 (128)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |video|color:color         ; color       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |video|color:color|block_dir                      ;
++----------------+----------------+----------------+----------------+
+; Name           ; block_dir.0000 ; block_dir.0010 ; block_dir.0001 ;
++----------------+----------------+----------------+----------------+
+; block_dir.0000 ; 0              ; 0              ; 0              ;
+; block_dir.0001 ; 1              ; 0              ; 1              ;
+; block_dir.0010 ; 1              ; 1              ; 0              ;
++----------------+----------------+----------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                     ;
++-------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                 ; Reason for Removal                     ;
++-------------------------------------------------------------------------------+----------------------------------------+
+; color:color|map[16,25,31,32,41,47,48,57,63,64,73,79,80,89,95,96,105,111..127] ; Stuck at VCC due to stuck port data_in ;
+; color:color|block_dir.0000                                                    ; Lost fanout                            ;
+; color:color|block_dir~4                                                       ; Lost fanout                            ;
+; color:color|block_dir~5                                                       ; Lost fanout                            ;
+; Total Number of Removed Registers = 37                                        ;                                        ;
++-------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 154   ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |video|VGAtiming:VGAtiming|HCnt[10] ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |video|color:color|map[54]          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |video|color:color|delay_cnt[0]     ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |video|VGAtiming:VGAtiming|VCnt[2]  ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |video|color:color|block_pos[3]     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |video|color:color|map[9]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "color:color"                                                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Red[3..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Green[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Blue[3..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGAtiming:VGAtiming"                                                                         ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; HCNT_O[10]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; VCNT_O[10..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 154                         ;
+;     ENA SLD           ; 18                          ;
+;     SCLR              ; 25                          ;
+;     SCLR SLD          ; 1                           ;
+;     SLD               ; 13                          ;
+;     plain             ; 97                          ;
+; cycloneiii_lcell_comb ; 285                         ;
+;     arith             ; 49                          ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 5                           ;
+;     normal            ; 236                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 160                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.55                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Wed Dec 18 13:31:08 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off video -c video
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Warning (12125): Using design file video.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: video File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+Info (12127): Elaborating entity "video" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at video.v(22): truncated value with size 32 to match size of target (4) File: /home1/y2022/s2210337/mics-second/video/video.v Line: 22
+Warning (10230): Verilog HDL assignment warning at video.v(23): truncated value with size 32 to match size of target (4) File: /home1/y2022/s2210337/mics-second/video/video.v Line: 23
+Warning (10230): Verilog HDL assignment warning at video.v(24): truncated value with size 32 to match size of target (4) File: /home1/y2022/s2210337/mics-second/video/video.v Line: 24
+Warning (10034): Output port "LED[7]" at video.v(3) has no driver File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+Warning (10034): Output port "LED[5..3]" at video.v(3) has no driver File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+Warning (12125): Using design file VGAtiming.v, which is not specified as a design file for the current project, but contains definitions for 3 design units and 3 entities in project
+    Info (12023): Found entity 1: VGAtiming File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 14
+    Info (12023): Found entity 2: clock2_25MHz File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 75
+    Info (12023): Found entity 3: VGAtimingSim File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 80
+Info (12128): Elaborating entity "VGAtiming" for hierarchy "VGAtiming:VGAtiming" File: /home1/y2022/s2210337/mics-second/video/video.v Line: 21
+Warning (10230): Verilog HDL assignment warning at VGAtiming.v(30): truncated value with size 32 to match size of target (11) File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 30
+Warning (10230): Verilog HDL assignment warning at VGAtiming.v(31): truncated value with size 32 to match size of target (11) File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 31
+Warning (10230): Verilog HDL assignment warning at VGAtiming.v(43): truncated value with size 32 to match size of target (11) File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 43
+Warning (10230): Verilog HDL assignment warning at VGAtiming.v(46): truncated value with size 32 to match size of target (11) File: /home1/y2022/s2210337/mics-second/video/VGAtiming.v Line: 46
+Warning (12125): Using design file color.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: color File: /home1/y2022/s2210337/mics-second/video/color.v Line: 1
+Info (12128): Elaborating entity "color" for hierarchy "color:color" File: /home1/y2022/s2210337/mics-second/video/video.v Line: 28
+Warning (10230): Verilog HDL assignment warning at color.v(52): truncated value with size 32 to match size of target (24) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 52
+Warning (10230): Verilog HDL assignment warning at color.v(72): truncated value with size 32 to match size of target (7) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 72
+Warning (10230): Verilog HDL assignment warning at color.v(75): truncated value with size 32 to match size of target (7) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 75
+Warning (10230): Verilog HDL assignment warning at color.v(87): truncated value with size 32 to match size of target (8) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 87
+Warning (10230): Verilog HDL assignment warning at color.v(88): truncated value with size 32 to match size of target (8) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 88
+Warning (10230): Verilog HDL assignment warning at color.v(89): truncated value with size 32 to match size of target (8) File: /home1/y2022/s2210337/mics-second/video/color.v Line: 89
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[3]" is stuck at GND File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+    Warning (13410): Pin "LED[4]" is stuck at GND File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+    Warning (13410): Pin "LED[5]" is stuck at GND File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+    Warning (13410): Pin "LED[6]" is stuck at VCC File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+    Warning (13410): Pin "LED[7]" is stuck at GND File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+    Warning (13410): Pin "LED[8]" is stuck at VCC File: /home1/y2022/s2210337/mics-second/video/video.v Line: 3
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 319 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 284 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 525 megabytes
+    Info: Processing ended: Wed Dec 18 13:31:17 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:12
+
+

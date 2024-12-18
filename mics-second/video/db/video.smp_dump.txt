@@ -1,0 +1,6 @@
+
+State Machine - |video|color:color|block_dir
+Name block_dir.0000 block_dir.0010 block_dir.0001 
+block_dir.0000 0 0 0 
+block_dir.0001 1 0 1 
+block_dir.0010 1 1 0 

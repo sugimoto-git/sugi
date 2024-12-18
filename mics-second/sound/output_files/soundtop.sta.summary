@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK24M'
+Slack : -3.064
+TNS   : -196.192
+
+Type  : Slow 1200mV 85C Model Setup 'CLK48M'
+Slack : -0.914
+TNS   : -0.914
+
+Type  : Slow 1200mV 85C Model Hold 'CLK24M'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK48M'
+Slack : 0.725
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK48M'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK24M'
+Slack : -1.487
+TNS   : -117.473
+
+Type  : Slow 1200mV 0C Model Setup 'CLK24M'
+Slack : -2.916
+TNS   : -178.762
+
+Type  : Slow 1200mV 0C Model Setup 'CLK48M'
+Slack : -0.840
+TNS   : -0.840
+
+Type  : Slow 1200mV 0C Model Hold 'CLK24M'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK48M'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK48M'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK24M'
+Slack : -1.487
+TNS   : -117.473
+
+Type  : Fast 1200mV 0C Model Setup 'CLK24M'
+Slack : -0.628
+TNS   : -30.464
+
+Type  : Fast 1200mV 0C Model Setup 'CLK48M'
+Slack : -0.029
+TNS   : -0.029
+
+Type  : Fast 1200mV 0C Model Hold 'CLK24M'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK48M'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK48M'
+Slack : -3.000
+TNS   : -4.168
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK24M'
+Slack : -1.000
+TNS   : -79.000
+
+------------------------------------------------------------

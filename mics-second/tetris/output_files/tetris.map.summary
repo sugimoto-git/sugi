@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Dec  9 14:49:35 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : tetris
+Top-level Entity Name : tetris
+Family : MAX 10
+Total logic elements : 285
+    Total combinational functions : 285
+    Dedicated logic registers : 161
+Total registers : 161
+Total pins : 35
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

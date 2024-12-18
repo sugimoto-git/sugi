@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Wed Nov 27 15:06:48 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : soundtop
+Top-level Entity Name : soundtop
+Family : MAX 10
+Device : 10M08SAE144C8GES
+Power Models : Final
+Total Thermal Power Dissipation : 136.05 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 110.66 mW
+I/O Thermal Power Dissipation : 25.39 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data
